@@ -1,0 +1,74 @@
+﻿@model ThpLession06CF.Models.ThpBook
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ThpBook</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpBookId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpBookId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpAuthor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpAuthor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpPulisher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpPulisher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpPicture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpPicture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThpCategoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThpCategoryId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ThpId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

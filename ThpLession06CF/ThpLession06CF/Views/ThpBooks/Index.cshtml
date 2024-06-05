@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ThpLession06CF.Models.ThpBook>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ThpBookId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThpTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThpAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThpYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThpPulisher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThpPicture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThpCategoryId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThpBookId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThpTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThpAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThpYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThpPulisher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThpPicture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThpCategoryId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ThpId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ThpId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ThpId })
+        </td>
+    </tr>
+}
+
+</table>
